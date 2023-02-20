@@ -1,0 +1,9 @@
+{% extends 'wagtail_versions/base.html' %}
+
+{% block content %}
+    {% for version in versions %}
+        <article class="version">
+            <h2><a href="{% url 'version' version=version %}">{{ version }}</a></h2>
+        </article>
+    {% endfor %}
+{% endblock %}
